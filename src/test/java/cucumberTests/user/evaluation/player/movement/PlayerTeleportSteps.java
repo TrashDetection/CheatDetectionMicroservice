@@ -3,8 +3,8 @@ package cucumberTests.user.evaluation.player.movement;
 import javax.inject.Inject;
 
 import cucumberTests.user.evaluation.CucumberUserEvaluation;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.incoming.IConfirmTransactionIncomingPacket;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.outgoing.IPlayerPositionAndLookOutgoingPacket;
+import fi.joniaromaa.minecrafthook.common.network.incoming.IConfirmTransactionIncomingPacket;
+import fi.joniaromaa.minecrafthook.common.network.outgoing.IPlayerPositionAndLookOutgoingPacket;
 import io.cucumber.java.en.When;
 
 public class PlayerTeleportSteps

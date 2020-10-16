@@ -6,15 +6,15 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import cucumber.runtime.java.guice.ScenarioScoped;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.IMinecraftHook;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.IMinecraftIncomingPacket;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.IMinecraftOutgoingPacket;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.shared.SharedMinecraftHooks;
+import fi.joniaromaa.cheatdetectionmicroservice.mocked.user.MockedUser;
+import fi.joniaromaa.cheatdetectionmicroservice.mocked.user.evaluation.MockedUserEvaluation;
+import fi.joniaromaa.minecrafthook.common.IMinecraftHook;
+import fi.joniaromaa.minecrafthook.common.MinecraftHooks;
+import fi.joniaromaa.minecrafthook.common.network.IMinecraftIncomingPacket;
+import fi.joniaromaa.minecrafthook.common.network.IMinecraftOutgoingPacket;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import lombok.Getter;
-import net.goldtreeservers.cheatdetectionmicroservice.mocked.user.MockedUser;
-import net.goldtreeservers.cheatdetectionmicroservice.mocked.user.evaluation.MockedUserEvaluation;
 
 @ScenarioScoped
 public class CucumberUserEvaluation
@@ -25,13 +25,13 @@ public class CucumberUserEvaluation
 	@Given("(player )connected with version {string}")
 	public void playerConnected(String version) throws Exception
 	{
-		IMinecraftHook hook = SharedMinecraftHooks.getHook(version);
+		IMinecraftHook hook = MinecraftHooks.getHook(version);
 		if (hook == null)
 		{
 			throw new IllegalArgumentException("Could not find Minecraft hook with version: " + version);
 		}
 		
-		this.user = new MockedUser(hook.getProtocolVersion());
+		this.user = new MockedUser(hook.getVersion().getProtocolVersion());
 		
 		this.evaluation = new MockedUserEvaluation(this.user);
 		this.evaluation.setup();

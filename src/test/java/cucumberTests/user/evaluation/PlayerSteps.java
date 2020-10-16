@@ -3,9 +3,9 @@ package cucumberTests.user.evaluation;
 import javax.inject.Inject;
 
 import cucumber.runtime.java.guice.ScenarioScoped;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.incoming.IPlayerIncomingPacket;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.outgoing.IJoinOutgoingPacket;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.utils.IGamemode;
+import fi.joniaromaa.minecrafthook.common.network.incoming.IPlayerIncomingPacket;
+import fi.joniaromaa.minecrafthook.common.network.outgoing.IJoinOutgoingPacket;
+import fi.joniaromaa.minecrafthook.common.utils.IGamemode;
 import io.cucumber.java.en.Given;
 
 @ScenarioScoped

@@ -3,9 +3,9 @@ package cucumberTests.user.evaluation.player.interaction;
 import javax.inject.Inject;
 
 import cucumberTests.user.evaluation.CucumberUserEvaluation;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.game.item.IItemStack;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.incoming.IBlockPlaceIncomingPacket;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.incoming.IPlayerDiggingIncomingPacket;
+import fi.joniaromaa.minecrafthook.common.game.item.IItemStack;
+import fi.joniaromaa.minecrafthook.common.network.incoming.IBlockPlaceIncomingPacket;
+import fi.joniaromaa.minecrafthook.common.network.incoming.IPlayerDiggingIncomingPacket;
 import io.cucumber.java.en.When;
 
 public class PlayerInteractionSteps

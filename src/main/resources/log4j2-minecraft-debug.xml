@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<configuration>
+	<Appenders>
+	    <Console name="STDOUT" target="SYSTEM_OUT">
+	      <PatternLayout pattern="%d{ISO8601} %-5p [%c] - %m%n"/>
+	    </Console>
+	    <Async name="Async">
+	      <AppenderRef ref="STDOUT"/>
+	    </Async>
+    </Appenders>
+	<Loggers>
+	    <Root level="info">
+	      <AppenderRef ref="Async"/>
+	    </Root>
+	</Loggers>
+</configuration>

@@ -6,5 +6,32 @@
 	"databasePass": "joni",
 	"databaseName": "trash",
 	
-	"autoBan": "true"
+	"autoBan": "true",
+	
+	"minecraftVersions":
+	[
+		{
+			"enabled": "true",
+			
+			"name": "fabric-loader-0.10.0+build.208-1.16.3",
+			"gameDir": "1.16"
+		},
+		{
+			"enabled": "false",
+			
+			"name": "fabric-loader-0.10.0+build.208-1.16.2",
+			"gameDir": "1.16"
+		},
+		{
+			"enabled": "false",
+			
+			"name": "fabric-loader-0.10.0+build.208-1.16.1",
+			"gameDir": "1.16"
+		},
+		{
+			"enabled": "false",
+			
+			"name": "1.8.9-forge1.8.9-11.15.1.2318-1.8.9"
+		}
+	]
 }

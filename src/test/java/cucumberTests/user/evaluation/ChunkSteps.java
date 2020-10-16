@@ -2,8 +2,8 @@ package cucumberTests.user.evaluation;
 
 import javax.inject.Inject;
 
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.incoming.IPlayerIncomingPacket;
-import fi.joniaromaacheatdetectionmicroserviceminecrafthook.network.outgoing.IChunkOutgoingPacket;
+import fi.joniaromaa.minecrafthook.common.network.incoming.IPlayerIncomingPacket;
+import fi.joniaromaa.minecrafthook.common.network.outgoing.IChunkOutgoingPacket;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fi.joniaromaa.cheatdetectionmicroservice.mixins",
+  "refmap": "mixins.cheatdetectionmicroservice.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  	"MixinServiceLoaderStreamUtils",
+  	"MixinTransformationServicesHandler",
+  	"MixinTransformingClassLoader"
+  ]
+}
