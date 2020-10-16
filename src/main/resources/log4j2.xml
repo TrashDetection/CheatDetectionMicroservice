@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<configuration>
+	<Appenders>
+	    <Console name="STDOUT" target="SYSTEM_OUT">
+	      <PatternLayout pattern="%d{ISO8601} %-5p [%c] - %m%n"/>
+	    </Console>
+	    <RollingRandomAccessFile name="File" fileName="app-logs/latest.log" filePattern="app-logs/app-%d{yyyy-MM-dd}-%i.log.gz">
+		      <PatternLayout>
+		        <Pattern>%d{ISO8601} %-5p [%c] - %m%n</Pattern>
+		      </PatternLayout>
+			<Policies>
+			  <OnStartupTriggeringPolicy />
+			  <TimeBasedTriggeringPolicy />
+			</Policies>
+	    </RollingRandomAccessFile>
+	    <Async name="Async">
+	      <AppenderRef ref="STDOUT"/>
+	      <AppenderRef ref="File"/>
+	    </Async>
+    </Appenders>
+
+	<Loggers>
+	    <Root level="info">
+	      <AppenderRef ref="Async"/>
+	    </Root>
+	</Loggers>
+</configuration>
